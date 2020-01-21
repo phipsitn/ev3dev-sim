@@ -236,7 +236,30 @@ var $builtinmodule = function(name) {
       return hls;
     });
 
+    $loc.color = new Sk.builtin.func(function(self) {
+    });
+
+    $loc.ambient = new Sk.builtin.func(function(self) {
+    });
+
+    $loc.reflection = new Sk.builtin.func(function(self) {  
+    });
+
+    $loc.rgb = new Sk.builtin.func(function(self) {
+    });
+
   }, 'ColorSensor', []);
+
+  mod.TouchSensor = Sk.misceval.buildClass(mod, function($gbl, $loc) {
+    var self = this;
+
+    $loc.__init__ = new Sk.builtin.func(function(self, address) {
+    });
+
+    $loc.pressed = new Sk.builtin.func(function(self) {
+    });
+
+  }, 'TouchSensor', []);
 
   mod.GyroSensor = Sk.misceval.buildClass(mod, function($gbl, $loc) {
     var self = this;
@@ -256,6 +279,15 @@ var $builtinmodule = function(name) {
       return gyro;
     });
 
+    $loc.speed = new Sk.builtin.func(function(self) {
+    });
+
+    $loc.angle = new Sk.builtin.func(function(self) {
+    });
+
+    $loc.reset_angle = new Sk.builtin.func(function(self, angle) {
+    });
+
   }, 'GyroSensor', []);
 
   mod.UltrasonicSensor = Sk.misceval.buildClass(mod, function($gbl, $loc) {
@@ -269,6 +301,12 @@ var $builtinmodule = function(name) {
 
     $loc.dist = new Sk.builtin.func(function(self) {
       return Math.round(sim.robotStates.ultrasonic);
+    });
+
+    $loc.distance = new Sk.builtin.func(function(self) {
+    });
+
+    $loc.presence = new Sk.builtin.func(function(self) {
     });
 
   }, 'UltrasonicSensor', []);
