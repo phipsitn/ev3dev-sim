@@ -311,6 +311,26 @@ var $builtinmodule = function(name) {
 
   }, 'UltrasonicSensor', []);
 
+  mod.ev3brick = sk.misceval.buildClass(mod, function($gbl, $loc) {
+    var self = this;
+
+    $loc.__init__ = new Sk.builtin.func(function(self, address){
+    });
+
+  }, 'ev3brick', []);
+
+  mod.ev3devices = sk.misceval.buildClass(mod, function($gbl, $loc) {
+    
+  }, 'ev3devices', []);
+
+  mod.parameters = sk.misceval.buildClass(mod, function($gbl, $loc) {
+  }, 'parameters', []);
+
+  mod.robotics = sk.misceval.buildClass(mod, function ($gbl, $loc) {
+  }, 'robotics', []);
+
+  mod.tools = sk.misceval.buildClass(mod, function($gbl, $loc) {
+  }, 'tools', []);
 
   return mod;
 };
